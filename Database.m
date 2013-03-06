@@ -1,4 +1,3 @@
-
 #import "Database.h"
 static sqlite3_stmt *updte_statement_tbl_tansaction = nil;
 
@@ -7,7 +6,7 @@ static sqlite3_stmt *updte_statement_tbl_tansaction = nil;
 +(NSString* )getDatabasePath{
 	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"Oenobook.sqlite"];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"dbname.sqlite"];
 	return writableDBPath;
 	
 }
