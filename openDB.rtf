@@ -1,0 +1,27 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf510
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red170\green13\blue145;\red92\green38\blue153;\red46\green13\blue110;
+\red28\green0\blue207;\red196\green26\blue22;\red100\green56\blue32;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab560
+\pard\tx560\pardeftab560\pardirnatural
+
+\f0\fs22 \cf0 \CocoaLigature0 - (\cf2 void\cf0 )createEditableCopyOfDatabaseIfNeeded \
+\{\
+    \
+    \cf2 BOOL\cf0  success;\
+    \cf3 NSFileManager\cf0  *fileManager = [\cf3 NSFileManager\cf0  \cf4 defaultManager\cf0 ];\
+    \cf3 NSError\cf0  *error;\
+    \cf3 NSArray\cf0  *paths = \cf4 NSSearchPathForDirectoriesInDomains\cf0 (\cf4 NSDocumentDirectory\cf0 , \cf4 NSUserDomainMask\cf0 , \cf2 YES\cf0 );\
+    \cf3 NSString\cf0  *documentsDirectory = [paths \cf4 objectAtIndex\cf0 :\cf5 0\cf0 ];\
+    \cf3 NSString\cf0  *writableDBPath = [documentsDirectory \cf4 stringByAppendingPathComponent\cf0 :\cf6 @"dbname.sqlite"\cf0 ];\
+    success = [fileManager \cf4 fileExistsAtPath\cf0 :writableDBPath];\
+    \cf2 if\cf0  (success) \
+        \cf2 return\cf0 ;\
+    \cf3 NSString\cf0  *defaultDBPath = [[[\cf3 NSBundle\cf0  \cf4 mainBundle\cf0 ] \cf4 resourcePath\cf0 ] \cf4 stringByAppendingPathComponent\cf0 :\cf6 @"dbname.sqlite"\cf0 ];\
+    success = [fileManager \cf4 copyItemAtPath\cf0 :defaultDBPath \cf4 toPath\cf0 :writableDBPath \cf4 error\cf0 :&error];\
+    \cf2 if\cf0  (!success) \
+    \{\
+        \cf7 NSAssert1\cf0 (\cf5 0\cf0 , \cf6 @"Failed to create writable database file with message '%@'."\cf0 , [error \cf4 localizedDescription\cf0 ]);\
+    \}\
+\}}
