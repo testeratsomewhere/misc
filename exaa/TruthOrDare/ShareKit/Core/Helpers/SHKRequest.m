@@ -1,0 +1,125 @@
+
+
+#import "SHKRequest.h"
+#import "SHKConfig.h"
+
+#define SHK_TIMEOUT 90
+
+@implementation SHKRequest
+
+@synthesize url, params, method, headerFields;
+@synthesize delegate, isFinishedSelector;
+@synthesize data, result, headers, response, connection;
+@synthesize success;
+
+- (void)dealloc
+{
+    self.data=nil;
+	[url release];
+	[params release];
+	[method release];
+	[headerFields release];
+	[connection release];
+	[data release];
+	[result release];
+	[response release];
+	[super dealloc];
+}
+
+- (id)initWithURL:(NSURL *)u params:(NSString *)p delegate:(id)d isFinishedSelector:(SEL)s method:(NSString *)m autostart:(BOOL)autostart
+{
+	if (self = [super init])
+	{
+		self.url = u;
+		self.params = p;
+		self.method = m;
+		
+		self.delegate = d;
+		self.isFinishedSelector = s;
+		
+		if (autostart)
+			[self start];
+	}
+	
+	return self;
+}
+
+
+#pragma mark -
+
+- (void)start
+{
+	self.data = [[[NSMutableData alloc] initWithLength:0] autorelease];
+	
+	
+	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url
+																  cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData
+															  timeoutInterval:SHK_TIMEOUT];
+	
+	// overwrite header fields (generally for cookies)
+	if (headerFields != nil)
+		[request setAllHTTPHeaderFields:headerFields];	
+	
+	// Setup Request Data/Params
+	if (params != nil)
+	{
+		NSData *paramsData = [ NSData dataWithBytes:[params UTF8String] length:[params length] ];
+		
+		// Fill Request
+		[request setHTTPMethod:method];
+		[request setHTTPBody:paramsData];
+	}
+	
+	// Start Connection
+	SHKLog(@"Start SHKRequest:\nURL: %@\nparams: %@", url, params);
+	self.connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
+	[request release];
+	[connection release];
+}
+
+
+#pragma mark -
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)theResponse 
+{
+	self.response = theResponse;
+	self.headers = [[response allHeaderFields] mutableCopy];
+	[headers release];
+	
+	[data setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)d 
+{
+	[data appendData:d];
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection 
+{
+	[self finish];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error 
+{
+	[self finish];
+}
+
+#pragma mark -
+
+- (void)finish
+{
+	self.success = (response.statusCode == 200 || response.statusCode == 201);
+	
+	if ([delegate respondsToSelector:isFinishedSelector])
+		[delegate performSelector:isFinishedSelector withObject:self];
+}
+
+- (NSString *)getResult
+{
+	if (result == nil)
+		self.result = [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] autorelease];
+	return result;
+}
+
+
+@end

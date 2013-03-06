@@ -1,0 +1,131 @@
+/* 
+  Localizable.strings
+  TruthOrDare
+
+  Created by Radhika Oza on 5/9/12.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+
+//"try"="try for French";
+
+//RootViewController -15
+"Truth or Dare"="Action ou Vérité";
+"Enter name key"="Ajout d'un nom";
+"Enter player name"="Merci de saisir un prénom avant d'appuyer sur cette touche.";
+"Already entered"="* fait déjà partie des joueurs.";
+"Change Setting"="Changer les paramètres";
+"Maximum 25 char key"="Le nom ne peut pas dépasser 25 caractères.";
+"Add name" = "Ajouter Joueur";
+"Do you want to add" = "Voulez-vous rajouter * à la liste des joueurs avant de commencer?";
+"Special char key"="Désolé, le prénom ne peut contenir que des lettres ou des chiffres.";
+"On"="On";
+"Off"="Retour";
+"Minimum two players"="Merci de saisir plusieurs noms avant de jouer.";
+"Alert for couple textview key-1"="Si vous jouez en groupe, il est recommandé de changer ces paramètres :\n1. Désactivez les actions Super Trash. Elles sont en général uniquement recommandées aux couples.\n2. Réduisez la vitesse de changement de niveau à 3 actions par personne.\n  Voulez-vous effectuer ces changements maintenant?";
+
+"Alert for couple textview key-2"="Si vous jouez en groupe, il est recommandé de changer ces paramètres :\n1. Désactivez les actions Super Trash. Elles sont en général uniquement recommandées aux couples.\n  Voulez-vous effectuer ces changements maintenant?";
+
+"Alert for couple textview key-3"="Si vous jouez en groupe, il est recommandé de changer ces paramètres :\n1. Réduisez la vitesse de changement de niveau à 3 actions par personne.\n  Voulez-vous effectuer ces changements maintenant?";
+
+
+//PlayViewController
+"It's your turn"="c'est ton tour !";
+
+//SelectionViewController
+
+//DirtyViewController
+
+//TruthOrDareDisplayView
+
+//SettingsViewController
+"Settings label"="Paramètres";
+"Sound"="Son";
+"Take turns in order"="Tourner dans l'ordre";
+"My Dares Only"="Mes actions uniquement";
+"Allow Changing Dares"="Autoriser à changer les actions";
+"Clean"="Soft";
+"Dirty"="Trash";
+"Super Dirty"="Super Trash";
+"Truth Mode"="Mode Vérité";
+"Mode"="Mode";
+"Speed"="Vitesse";
+"You cannot disable all dares"="Vous ne pouvez pas désactiver toutes les actions.";
+"Increase dirtiness"="Augmenter le niveau une fois que tout le monde a fait un certain nombre d'actions";
+"Auto Challenge"="Vérité Auto";
+"Auto Challenge message"="Lance automatiquement une vérité si quelqu'un reçoit beaucoup d'actions à la suite.";
+"All Truths"="Toutes les vérités";
+"All Dares"="Toutes les actions";
+"General label"="Général";
+"Dirty play"="Jeu Trash";
+"Shake it up"="Mélanger";
+"Language Support"="Langue";
+"Language" = " Français";
+
+
+//TruthAndDareList - 25
+
+//EditTruthOrDareViewController
+"Truth"="Vérité";
+"Dare"="Action";
+"Enter"="Entrer";
+//"No player"="No player";
+"Updated"="actualisée";
+"Added"="ajoutée";
+"Preview"="Prévisualisation";
+"Add Person Code"="Ajouter Code de Personne";
+"This is for"="Ce gage est pour";
+"For"="Pour";
+"Males"="Mecs";
+"Females"="Filles";
+"Both"="Mecs ou Filles";
+"Players Needed"="Nombre de joueurs minimum nécessaire";
+"players"=" joueurs et +";
+"Dirtiness"="Niveau";
+"Delete"="Supprimer";
+"strAlertMessage-1"="Merci de saisir deux prénoms de joueurs minimum sur l'écran d'accueil.";
+"Please Enter"="S'il vous plaît entrez";
+"Are you sure you want to delete this"="Êtes-vous sûr de vouloir supprimer cette *?";
+"Yes"="Oui";
+"No"="Non";
+
+
+//PersonCodeViewController - 15
+"Anybody of either sex"="N'importe quelle personne";
+"Somebody of opposite sex"="Quelqu'un du sexe opposé";
+"Somebody of same sex"="Quelqu'un du même sexe";
+"Anybody else of either sex"="N'importe qui d'autre de n'importe quel sexe";
+"Somebody else of opposite sex"="Quelqu'un d'autre du sexe opposé";
+"Somebody else of same sex"="Quelqu'un d'autre du même sexe";
+
+"He or she -*he"="Il ou elle -*il";
+"He or she -*his"="Son ou sa -*son";
+"He or she -*him"="Lui ou elle -*lui";
+"Person Code"="Sélectionner la personne";
+"Select Code"="Sélectionner le code";
+"he"="il";
+"He"="Il";
+"she"="elle";
+"his"="son";
+"him"="lui";
+"her"="sa";
+"her1"="elle";
+"His"="Son";
+"Him"="Lui";
+//select Player
+"Number of players"="Nombre de joueurs";
+
+//FilterViewController - 14
+"Filter"="Filtrer";
+"Dirtiness"="Niveau";
+"Minimum"="Minimum";
+"Maximum"="Maximum";
+"Source"="Sources";
+"Built In"="Intégrées";
+"Mine"="Personnelles";
+"Active label"="Actives";
+"Active"="Actives";
+"Inactive"="Inactives";
+"Gender"="Sexe";
+"For both sexes"="Pour Mecs ou Filles";
+"For females"="Pour les Filles";
+"For males"="Pour les Mecs";

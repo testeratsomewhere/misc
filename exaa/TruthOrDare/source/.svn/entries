@@ -1,0 +1,91 @@
+10
+
+dir
+0
+https://inxserver.inheritx:3443/svn/TOD_Localization/branches/TruthOrDare/TruthOrDare/source
+https://inxserver.inheritx:3443/svn/TOD_Localization
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+67559123-d2b0-5a4d-87bc-55a2ae6f1961
+
+build
+dir
+
+
+
+add
+
+madvertise
+dir
+
+
+
+add
+
+madvertise-ios-sdk.xcodeproj
+dir
+
+
+
+add
+
+JSONKit.h
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+JSONKit.m
+file
+
+
+
+add
+
+
+
+
+
+has-props
+has-prop-mods
+
+MRAID
+dir
+
+
+
+add
+
+UIWebView Categories
+dir
+
+
+
+add
+

@@ -1,0 +1,196 @@
+ 
+
+#import "TruthOrDareAppDelegate.h"
+#import "RootViewController.h"
+#import "FlurryAnalytics.h"
+#import "TapjoyConnect.h"
+@implementation TruthOrDareAppDelegate
+
+@synthesize window = _window;
+@synthesize navigationController;
+
+@synthesize database;
+@synthesize flgUpdate;
+@synthesize arrDelegateMaleTruth, arrDelegateMaleDare, arrDelegateFemaleTruth, arrDelegateFemaleDare;
+@synthesize playerCount;
+@synthesize objactivity;
+@synthesize arrayDirtyness;
+@synthesize dirtinessLevel;
+@synthesize flagfilter;
+@synthesize strCurrentPlayerGender, strCurrentPlayerName;
+@synthesize arrMaleTruthChallengeId, arrFemaleTruthChallengeId, arrFemaleDareChallengeId, arrMaleDareChallengeId, arrFacedDare;
+@synthesize arrDirtinesNumber;
+@synthesize roundCount;
+@synthesize stackArr;
+@synthesize stackGenderArr;
+@synthesize usedGender;
+@synthesize playerDetailsArray;
+@synthesize dirtystartValue;
+@synthesize speedCountArray;
+@synthesize changedirtiness;
+@synthesize Dirtyvalue;
+@synthesize dirtystartValueformine;
+@synthesize Changesettingint;
+@synthesize changeLang;
+
+#pragma mark Uncaught exception handler
+void uncaughtExceptionHandler(NSException *exception)
+{
+    [FlurryAnalytics logError:@"Uncaught Exception"
+                      message:[exception name]
+                    exception:exception];
+}
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    changeLang = 1;
+    [FlurryAnalytics startSession:@"C2W8YCL8GPAUN6PVT2FW"];
+    NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+    [FlurryAnalytics logAllPageViews:navigationController];
+    [TapjoyConnect requestTapjoyConnect:@"0dedddc7-8cb0-4dc4-9276-9fd9215b73c2" secretKey:@"yHxT1bmXe4854CIaKhAY"];
+    changedirtiness=NO;
+    Changesettingint=1;
+    objactivity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    objactivity.hidesWhenStopped = YES;
+    navigationController = [[UINavigationController alloc] init];
+    [self.window addSubview:navigationController.view];
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+
+    thisDevice = [UIDevice currentDevice];
+    RootViewController *rootObject;
+    
+    if(thisDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad)
+    {
+        rootObject = [[RootViewController alloc] initWithNibName:@"RootViewController_iPad" bundle:nil];
+
+    }
+    else
+    {
+        rootObject = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    }
+    [self.navigationController pushViewController:rootObject animated:YES];
+    [rootObject release];
+    
+    //--Creating the database if not created
+    [self createEditableCopyOfDatabaseIfNeeded];
+	[self initializeDatabase];
+    
+    flgUpdate = FALSE;
+    playerCount = 0;
+    arrDelegateMaleTruth = [[NSMutableArray alloc] init];
+    arrDelegateMaleDare = [[NSMutableArray alloc] init];
+    arrDelegateFemaleTruth = [[NSMutableArray alloc] init];
+    arrDelegateFemaleDare = [[NSMutableArray alloc] init];
+    arrayDirtyness=[[NSMutableArray alloc]init];
+    dirtinessLevel = 0;
+    arrDirtinesNumber=[[NSMutableArray alloc]init];
+    roundCount = 0;
+    arrFemaleTruthChallengeId = [[NSMutableArray alloc] init];
+    arrMaleTruthChallengeId = [[NSMutableArray alloc] init];
+    arrFemaleDareChallengeId = [[NSMutableArray alloc] init];
+    arrMaleDareChallengeId = [[NSMutableArray alloc] init];    
+    
+    arrFacedDare = [[NSMutableArray alloc] init];
+    
+    strCurrentPlayerGender = [[NSString alloc] init];
+    strCurrentPlayerName = [[NSString alloc] init];
+    stackArr = [[NSMutableArray alloc] init];
+    stackGenderArr = [[NSMutableArray alloc] init];
+    return YES;
+}
+
+
+#pragma mark database methods
+- (void)createEditableCopyOfDatabaseIfNeeded 
+{
+    
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"TruthOrDare.sqlite"];
+    success = [fileManager fileExistsAtPath:writableDBPath];
+    if (success) 
+        return;
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TruthOrDare.sqlite"];
+    success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+    if (!success) 
+    {
+        NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+    }
+}
+
+// Open the database connection 
+- (void)initializeDatabase 
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path = [documentsDirectory stringByAppendingPathComponent:@"TruthOrDare.sqlite"];
+    // Open the database. The database was prepared outside the application.
+    if (sqlite3_open([path UTF8String], &database) == SQLITE_OK) 
+    {
+        NSLog(@"Database Opened Successfully..");
+    } 
+    else 
+    {
+        // Even though the open failed, call close to properly clean up resources.
+        sqlite3_close(database);
+        NSAssert1(0, @"Failed to open database with message '%s'.", sqlite3_errmsg(database));
+        
+    }
+}
+
+- (void)applicationWillResignActive:(UIApplication *)application
+{
+    
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+   
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application
+{
+   
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application
+{
+    
+}
+
+- (void)applicationWillTerminate:(UIApplication *)application
+{
+    
+}
+- (void)dealloc
+{
+    self.playerDetailsArray = nil;
+    [arrDelegateMaleTruth release]; 
+    [arrDelegateMaleDare release]; 
+    [arrDelegateFemaleTruth release]; 
+    [arrDelegateFemaleDare release]; 
+    [arrayDirtyness release];
+    
+    [arrFemaleTruthChallengeId release];
+    [arrMaleTruthChallengeId release];
+    [arrFacedDare release];
+    
+    [strCurrentPlayerName release];
+    [strCurrentPlayerGender release];
+    
+    [arrMaleDareChallengeId release];
+    [arrFemaleDareChallengeId release];
+    [stackArr release];
+    [stackGenderArr release];
+    [usedGender release];
+    
+	[super dealloc];
+}
+
+
+
+@end

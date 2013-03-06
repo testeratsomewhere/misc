@@ -1,0 +1,133 @@
+/* 
+  Localizable.strings
+  TruthOrDare
+
+  Created by Radhika Oza on 5/9/12.
+  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+*/
+
+//"try"="try for German";
+
+//RootViewController
+
+"Truth or Dare"="Wahrheit oder Pflicht";
+"Enter name key"="Namen eingeben";
+"Enter player name"="Gib einen Namen ein";
+"Already entered"="Du hast * bereits eingegeben";
+"Change Setting"="Einstellungen ändern";
+"Maximum 25 char key"="Name darf nicht länger als 25 Zeichen sein.";
+"Add name" = "Name hinzufügen";
+"Do you want to add" = "Soll * hinzugefügt werden?";
+"Special char key"="Der Name kann nur Buchstaben und Zahlen enthalten";
+"On"="An";
+"Off"="Aus";
+"Minimum two players"="Du musst mindestens 2 Namen eingeben.";
+"Alert for couple textview key-1"="Für ein Gruppenspiel werden diese Einstellungsänderungen empfohlen:\n 1.Schalte super schmutzige Pflichten ab. Sie eignen sich in der Regel nur für Paare.\n 2. Reduziere die Geschwindigkeit fortschreitender Schmutzigkeit auf 3 Pflichten pro Person.\n  Möchtest Du diese Änderungen jetzt machen?";
+
+"Alert for couple textview key-2"="Für ein Gruppenspiel werden diese Einstellungsänderungen empfohlen:\n 1. Schalte super schmutzige Pflichten ab. Sie eignen sich in der Regel nur für Paare.\n  Möchtest Du diese Änderungen jetzt machen?";
+"Alert for couple textview key-3"="Für ein Gruppenspiel werden diese Einstellungsänderungen empfohlen:\n 1. Reduziere die Geschwindigkeit fortschreitender Schmutzigkeit auf 3 Pflichten pro Person.\n  Möchtest Du diese Änderungen jetzt machen?";
+
+//PlayViewController
+"It's your turn"="du bist dran";
+
+//SelectionViewController
+
+//DirtyViewController
+
+//TruthOrDareDisplayView
+
+//SettingsViewController
+"Settings label"="Einstellungen";
+"Sound"="Sound";
+"Take turns in order"="Alle nacheinander";
+"My Dares Only"="Nur meine Fragen";
+"Allow Changing Dares"="Ändern von Pflichten erlauben";
+"Clean"="Jugendfrei";
+"Dirty"="Schmutzig";
+"Super Dirty"="Super schmutzig";
+"Truth Mode"="Wahrheits Modus";
+"Mode"="Modus";
+"Speed"="Tempo";
+"You cannot disable all dares"="Du kannst nicht alle Pflichten deaktivieren.";
+"Increase dirtiness"="Schmutziger, nachdem jeder so viele Pflichten gespielt hat";
+"Auto Challenge"="Auto Wahrheit";
+"Auto Challenge message"="Spiele automatisch eine Wahrheit, wenn jemand diese Anzahl von Pflichten hintereinander gespielt hat";
+"All Truths"="Nur Wahrheiten";
+"All Dares"="Nur Pflichten";
+"General label"="Allgemein";
+"Dirty play"="Schmutzig spielen";
+"Shake it up"="Modi";
+"Language Support"="Sprache";
+"Language" = " Deutsch";
+
+
+//TruthAndDareList - 25
+
+//EditTruthOrDareViewController
+"Truth"="Wahrheit";
+"Dare"="Pflicht";
+"Enter"="Eingeben";
+//"No player"="No player";
+
+"Updated"="Aktualisiert";
+
+"Added"="hinzugefügt";
+"Preview"="Vorschau";
+"Add Person Code"="Personencode hinzufügen";
+"This is for"="Diese Aufgabe ist für";
+"For"="Für";
+"Males"="Nur Jungs";
+"Females"="Nur Mädels";
+"Both"="Alle";
+"Players Needed"="Anzahl benötigter Spieler";
+"players"="+ Spieler";
+"Dirtiness"="Schmutzig";
+"Delete"="Löschen";
+"strAlertMessage-1"="Gib mindestens 2 Namen im Hauptmenü ein, um eine Vorschau zu erhalten";
+"Please Enter"="Geben Sie bitte";
+"Are you sure you want to delete this"="Bist du sicher, dass du diese * löschen willst?";
+"Yes"="Ja";
+"No"="Nein";
+
+
+//PersonCodeViewController - 15
+"Anybody of either sex"="Jeder (Geschlecht egal)";
+"Somebody of opposite sex"="Jemand des anderen Geschlechts";
+"Somebody of same sex"="Jemand desselben Geschlechts";
+"Anybody else of either sex"="Jemand anders, egal welchen Geschlechts";
+"Somebody else of opposite sex"="Jemand des anderen Geschlechts";
+"Somebody else of same sex"="Jemand desselben Geschlechts";
+
+"He or she -*he"="Er oder sie -*er";
+"He or she -*his"="Sein oder ihr -*sein";
+"He or she -*him"="Ihm oder ihr -*ihm";
+"Person Code"="Person wählen";
+"Select Code"="Code wählen";
+"he"="er";
+"He"="Er";
+"she"="sie";
+"his"="sein";
+"His"="Sein";
+"him"="ihm";
+"Him"="Ihm";
+"her"="ihr";
+"her1"="ihr";
+
+//select Player
+"Number of players"="Anzahl der spieler";
+//FilterViewController - 14
+"Filter"="Filtern";
+"Dirtiness"="Schmutzigkeit";
+"Minimum"="Minimum";
+"Maximum"="Maximum";
+"Source"="Quelle";
+"Built In"="Voreingestellte";
+"Mine"="Meine";
+"Active label"="Aktiv";
+"Active"="Aktiv";
+"Inactive"="Inaktiv";
+"Gender"="Geschlecht";
+"For both sexes"="Für Beide Geschlechter";
+"For females"="Für Frauen";
+"For males"="Für Männer";
+

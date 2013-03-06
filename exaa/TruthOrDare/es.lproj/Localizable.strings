@@ -1,0 +1,154 @@
+/* 
+ Localizable.strings
+ TruthOrDare
+ 
+ Created by Radhika Oza on 5/9/12.
+ Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+ */
+
+//"try"="try for Spanish";
+
+//RootViewController - 15
+"Truth or Dare" = "Verdad o Atrevimiento";
+"Enter name key"="Introduzca nombre";
+"Enter player name"="Escriba un nombre";
+"Minimum two players"="Debe introducir al menos dos nombres.";
+"Maximum 25 char key"="El nombre no puede medir más de 25 caracteres";
+"Add name" = "Añadir nombre";
+"Do you want to add" = "¿Desea añadir a *?";
+"Special char key"="Lo siento, los nombres pueden contener solo letras y números.";
+"Already entered"="* ya ha sido añadido";
+"Change Setting" = "Cambiar Configuración";
+
+"Alert for couple textview key-1"="Para jugar en grupo, se recomienda esta configuración:\n 1. Desactiva las pruebas Súper Picantes. Generalmente están recomendadas sólo para parejas.\n 2. Reduce la velocidad de aumento de picardía cada 3 pruebas por persona\n  ¿Te gustaría aplicar estos cambios ahora?";
+
+"Alert for couple textview key-2"="Para jugar en grupo, se recomienda esta configuración:\n 1. Desactiva las pruebas Súper Picantes. Generalmente están recomendadas sólo para parejas.\n  ¿Te gustaría aplicar estos cambios ahora?";
+
+"Alert for couple textview key-3"="Para jugar en grupo, se recomienda esta configuración:\n 1. Reduce la velocidad de aumento de picardía cada 3 pruebas por persona.\n  ¿Te gustaría aplicar estos cambios ahora?";
+
+"On"="Activado";
+"Off"="Desactivado";
+
+//PlayViewController
+"It's your turn"="es tu turno";
+
+//SelectionViewController
+
+//DirtyViewController
+
+//TruthOrDareDisplayView
+
+//SettingsViewController - 20
+"Settings label"="Configuración";
+"General label"="General";
+"Sound"="Sonido";
+
+"Take turns in order" = "Turnar en orden";
+"My Dares Only"="Solo mis Atrevimientos";
+"Allow Changing Dares"="Permitir cambiar de reto";
+"Dirty play" = "Picante Jugar";
+"Clean"="Casto";
+
+"Dirty"="Picante";
+"Super Dirty"="Súper Picante";
+
+"Shake it up"="Mezclar";
+"All Truths"="Todos Verdades";
+"All Dares"="Todos Atrevimientos";
+
+"Speed"="Velocidad";
+"Increase dirtiness"="Aumenta el nivel de erotismo cuando cada jugador haya jugado este número de retos";
+"Auto Challenge"="Verdad Automática";
+"Auto Challenge message"="Jugar automáticamente a Verdad si alguien elige Atrevimiento demasiadas veces seguidas";
+
+"Truth Mode"="Modo Verdad";
+"Mode"="Modo";
+
+"You cannot disable all dares"="No puedes desactivar todas las pruebas";
+"Language Support"="Lengua";
+"Language" = " Español";
+
+
+
+//TruthAndDareList
+
+//EditTruthOrDareViewController - 25
+"Truth" = "Verdad";
+"Dare" = "Atrevimiento";
+"Enter"="Introduzca";
+"Please Enter"="Por favor, introduzca";
+
+"Updated"="actualizado";
+"Added"="Añadido";
+
+"Preview"="Previsualización";
+"Add Person Code"="Añadir código personal";
+"This is for"="Es para";
+"For"="Para";
+"Males"="Hombres";
+"Females"="Mujeres";
+"Both"="Ambos sexos";
+"Players Needed"="Número de jugadores necesarios";
+"Yes"="Sí";
+"No"="No";
+
+"players" = " ó más jugadores";
+"Dirtiness"="Picardía";
+"Delete"="Borrar";
+"strAlertMessage-1"="Por favor, introduzca al menos 2 nombres en el menú principal para la previsualización";
+
+"Are you sure you want to delete this"="¿Estás seguro de que quieres borrar esta *?";
+
+//PersonCodeViewController - 15
+"Anybody of either sex"="Cualquier persona de ambos sexos";
+"Somebody of opposite sex"="Alguien del sexo opuesto";
+"Somebody of same sex"="Alguien del mismo sexo";
+"Anybody else of either sex"="Cualquiera de ambos sexos";
+"Somebody else of opposite sex"="Alguien del sexo opuesto";
+"Somebody else of same sex"="Alguien del mismo sexo";
+
+"He or she -*he"="Él o ella -*el";
+"He or she -*his"="Al o a la -*al";
+"He or she -*him"="Lo o la -*lo";
+"Person Code"="Selecciona persona";
+"Select Code"="Selecciona código";
+
+//"he"="él";
+"he"="el";
+"He"="Él";
+"his"="al";
+"him"="lo";
+"His"="Al";
+"Him"="Lo";
+"her1"="la";
+"her" = "a la";
+"she" = "ella";
+
+//FilterViewController -14
+"Filter"="Filtro";
+"Dirtiness"="Picardía";
+"Minimum"="Mínimo";
+"Maximum"="Máximo";
+"Source"="Índice";
+"Built In"="Incluídas";
+"Mine"="Mías";
+"Active label"="Activo";
+"Active"="Activo";
+"Inactive"="Inactivas";
+"Gender"="Géneno";
+"For both sexes"="Para Ambos sexos";
+"For females"="Para mujeres";
+"For males"="Para hombres";
+
+//Popup
+
+//PlayerselectionVC
+"Number of players"="Número de jugadores";
+//"Speed"="Speed/";
+//"Auto Challenge"="Auto Challenge";
+//"players"="players";
+
+
+//SettingsSegmentCustomCell
+//"On"="On + Spanish";
+//"Off"="Desactivado";

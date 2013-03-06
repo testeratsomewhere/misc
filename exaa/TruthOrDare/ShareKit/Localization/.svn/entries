@@ -1,0 +1,34 @@
+10
+
+dir
+158
+https://inxserver.inheritx:3443/svn/TOD_Localization/branches/TruthOrDare/TruthOrDare/ShareKit/Localization
+https://inxserver.inheritx:3443/svn/TOD_Localization
+
+
+
+2012-05-15T09:47:55.609375Z
+10
+rpatel
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+67559123-d2b0-5a4d-87bc-55a2ae6f1961
+
+de.lproj
+dir
+
+en.lproj
+dir
+

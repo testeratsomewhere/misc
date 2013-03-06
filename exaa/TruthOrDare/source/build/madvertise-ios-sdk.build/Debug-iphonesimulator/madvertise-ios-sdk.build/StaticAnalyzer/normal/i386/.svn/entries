@@ -1,0 +1,252 @@
+10
+
+dir
+0
+https://inxserver.inheritx:3443/svn/TOD_Localization/branches/TruthOrDare/TruthOrDare/source/build/madvertise-ios-sdk.build/Debug-iphonesimulator/madvertise-ios-sdk.build/StaticAnalyzer/normal/i386
+https://inxserver.inheritx:3443/svn/TOD_Localization
+add
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+67559123-d2b0-5a4d-87bc-55a2ae6f1961
+
+MRAdViewBrowsingController.d
+file
+
+
+
+add
+
+MPGlobal.d
+file
+
+
+
+add
+
+MadvertiseView.d
+file
+
+
+
+add
+
+MPAdBrowserController.plist
+file
+
+
+
+add
+
+MadvertiseUtilities.plist
+file
+
+
+
+add
+
+MadvertiseAd.d
+file
+
+
+
+add
+
+UIWebView+MPAdditions.d
+file
+
+
+
+add
+
+MRAdView.d
+file
+
+
+
+add
+
+MadvertiseTracker.d
+file
+
+
+
+add
+
+MRAdViewDisplayController.plist
+file
+
+
+
+add
+
+MRCommand.plist
+file
+
+
+
+add
+
+MPTimer.plist
+file
+
+
+
+add
+
+MRDimmingView.plist
+file
+
+
+
+add
+
+JSONKit.plist
+file
+
+
+
+add
+
+MPAdBrowserController.d
+file
+
+
+
+add
+
+MRProperty.plist
+file
+
+
+
+add
+
+MPLogging.plist
+file
+
+
+
+add
+
+MadvertiseUtilities.d
+file
+
+
+
+add
+
+MRAdViewBrowsingController.plist
+file
+
+
+
+add
+
+MPGlobal.plist
+file
+
+
+
+add
+
+MadvertiseView.plist
+file
+
+
+
+add
+
+MRAdViewDisplayController.d
+file
+
+
+
+add
+
+MRCommand.d
+file
+
+
+
+add
+
+MPTimer.d
+file
+
+
+
+add
+
+MRDimmingView.d
+file
+
+
+
+add
+
+MadvertiseAd.plist
+file
+
+
+
+add
+
+JSONKit.d
+file
+
+
+
+add
+
+MRProperty.d
+file
+
+
+
+add
+
+MPLogging.d
+file
+
+
+
+add
+
+UIWebView+MPAdditions.plist
+file
+
+
+
+add
+
+MRAdView.plist
+file
+
+
+
+add
+
+MadvertiseTracker.plist
+file
+
+
+
+add
+

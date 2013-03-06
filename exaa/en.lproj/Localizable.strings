@@ -1,0 +1,143 @@
+/* 
+ Localizable.strings
+ TruthOrDare
+ 
+ Created by Radhika Oza on 5/9/12.
+ Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+ */
+
+//"try"="English";
+
+//RootViewController -15
+
+"Truth or Dare"="Truth or Dare";
+"Enter name key"="Enter name";
+"Enter player name"="Enter Player Name";
+"Already entered"="You have already entered *";
+"Change Setting"="Change Settings";
+"Maximum 25 char key"="Name cannot be more than 25 characters long.";
+"Special char key"="Sorry, name can be letters and numbers only.";
+"Add name"="Add name";
+"On"="ON";
+"Off"="OFF";
+"Do you want to add" = "Do you want to add *?";
+"Minimum two players"="You must enter at least two names.";
+"Alert for couple textview key-1"="For a group game, these setting changes are recommended:\n 1. Turn off Super Dirty dares. They are generally recommended for couples.\n 2. Reduce speed of progressive dirtiness to 3 dares per person.\n\n Would you like to make these changes now?";
+
+"Alert for couple textview key-2"="For a group game, these setting changes are recommended:\n 1. Turn off Super Dirty dares. They are generally recommended for couples.\n\n Would you like to make these changes now?";
+"Alert for couple textview key-3"="For a group game, these setting changes are recommended:\n 1. Reduce speed of progressive dirtiness to 3 dares per person.\n\n Would you like to make these changes now?";
+
+//PlayViewController
+"It's your turn"="It's your turn";
+
+//SelectionViewController
+
+//DirtyViewController
+
+//TruthOrDareDisplayView
+
+//SettingsViewController - 20
+"Settings label"="Settings";
+"Sound"="Sound";
+"Take turns in order"="Take Turns in order";
+"My Dares Only"="My Dares Only";
+"Allow Changing Dares"="Allow Changing Dares";
+"Clean"="Clean";
+"Dirty"="Dirty";
+"Super Dirty"="Super Dirty";
+"Truth Mode"="Truth Mode";
+"Mode"="Mode";
+"Speed"="Speed";
+"You cannot disable all dares"="You cannot disable all dares";
+"Increase dirtiness"="Increase dirtiness after everyone has played this many dares each";
+"Auto Challenge"="Auto Challenge";
+"Auto Challenge message"="Automatically play a Truth if somebody plays this many dares consecutively";
+"All Truths"="All Truth";
+"All Dares"="All Dare";
+"General label"="General";
+"Dirty play"="Dirty Play";
+"Shake it up"="Shake it up";
+"Language Support"="Language";
+"Language" = " English";
+
+
+
+//TruthAndDareList
+
+//EditTruthOrDareViewController - 25
+
+"Truth"="Truth";
+"Dare"="Dare";
+"Enter"="Enter";
+"Error while creating update statement"="Error while creating update statement";
+"Error while updating"="Error while updating.";
+"Updated"="Updated";
+"Error while creating add statement"="Error while creating add statement.";
+"Error while inserting data"="Error while inserting data.";
+"Added"="Added";
+"Preview"="Preview";
+"Add Person Code"="Add Person Code";
+"This is for"="This is for";
+"For"="For";
+"Males"="Males only";
+"Females"="Females only";
+"Both"="Both";
+"Players Needed"="Number of players needed";
+"players"="+ players";
+"Dirtiness"="Dirtiness";
+"Delete"="Delete";
+"strAlertMessage-1"="Please enter at least 2 names on the main page to preview.";
+"Please Enter"="Please Enter";
+"Are you sure you want to delete this"="Are you sure you want to delete this *?";
+"Yes"="Yes";
+"No"="No";
+
+//PersonCodeViewController - 15
+"Anybody of either sex"="Anybody of either sex";
+"Somebody of opposite sex"="Somebody of opposite sex";
+"Somebody of same sex"="Somebody of same sex";
+"Anybody else of either sex"="Anybody else of either sex";
+"Somebody else of opposite sex"="Somebody else of opposite sex";
+"Somebody else of same sex"="Somebody else of same sex";
+
+"He or she -*he"="He or she -*he";
+"He or she -*his"="His or her -*his";
+"He or she -*him"="Him or her -*him";
+"Person Code"="Select person";
+"Select Code"="Select code";
+
+"he"="he";
+"He"="He";
+"she"="she";
+"his"="his";
+"him"="him";
+"her"="her";
+"His"="His";
+"Him"="Him";
+"her1"="her";
+//FilterViewController - 14
+"Filter"="Filter";
+"Dirtiness"="Dirtiness";
+"Minimum"="Minimum";
+"Maximum"="Maximum";
+"Source"="Source";
+"Built In"="Built In";
+"Mine"="Mine";
+"Active label"="Active";
+"Active"="Active";
+"Inactive"="Inactive";
+"Gender"="Gender";
+"For both sexes"="For both sexes";
+"For females"="For females";
+"For males"="For males";
+
+//Popup
+
+//PlayerselectionVC
+"Number of players"="Number of players";
+
+"Auto Challenge"="Auto Challenge";
+
+//SettingsSegmentCustomCell
+"On"="On";
+"Off"="Off";
